@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Flat-Plat-light-compact
+Name=Archie-light-compact
 Comment=A Material Design-like theme
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Flat-Plat-light-compact
-MetacityTheme=Flat-Plat-light-compact
+GtkTheme=Archie-light-compact
+MetacityTheme=Archie-light-compact
 IconTheme=Adwaita
 CursorTheme=Adwaita
 CursorSize=24

@@ -118,5 +118,5 @@ Upstream theme sources:
 Tips:
 - [Unity/Theming](https://wiki.ubuntu.com/Unity/Theming)
 - [Material Design Guidelines](https://www.material.io/guidelines/)
-- [Personal CSS Guidelines](https://github.com/nana-4/Flat-Plat/wiki/CSS-Guidelines)
+- [Personal CSS Guidelines](https://github.com/nana-4/Archie/wiki/CSS-Guidelines)
 - [The GTK+ Inspector](https://blog.gtk.org/2017/04/05/the-gtk-inspector/)
