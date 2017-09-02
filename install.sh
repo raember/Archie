@@ -1,5 +1,7 @@
 #!/bin/bash
 
+themename=Archie
+
 repodir=$(cd $(dirname $0) && pwd)
 srcdir=${repodir}/src
 
@@ -22,9 +24,9 @@ echo
 
 for color in '' '-dark' '-light' ; do
   for size in '' '-compact' ; do
-    echo Installing Flat-Plat${color}${size} ...
+    echo Installing $themename${color}${size} ...
 
-    themedir=${destdir}/usr/share/themes/Flat-Plat${color}${size}
+    themedir=${destdir}/usr/share/themes/$themename${color}${size}
     install -d ${themedir}
 
     # Copy COPYING
@@ -43,15 +45,15 @@ for color in '' '-dark' '-light' ; do
     install -d ${themedir}/chrome
     cd ${srcdir}/chrome
     cp -ur \
-      "Flat-Plat${color} Theme.crx" \
+      "$themename${color} Theme.crx" \
       ${themedir}/chrome
     if [ "$color" != '-dark' ] ; then
       cp -ur \
-        "Flat-Plat Scrollbars.crx" \
+        "$themename Scrollbars.crx" \
         ${themedir}/chrome
     else
       cp -ur \
-        "Flat-Plat${color} Scrollbars.crx" \
+        "$themename${color} Scrollbars.crx" \
         ${themedir}/chrome
     fi
 

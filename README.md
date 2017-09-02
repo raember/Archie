@@ -1,6 +1,6 @@
-Flat-Plat
+Archie
 =========
-Flat-Plat is a [Material Design](https://material.io)-like theme for GNOME/GTK+ based desktop environments.  
+Archie is a [Material Design](https://material.io)-like theme for GNOME/GTK+ based desktop environments.  
 It supports GTK3, GTK2, Metacity, GNOME Shell, Unity, Budgie, MATE, LightDM, GDM, Chrome theme, etc.
 
 Features
@@ -45,21 +45,21 @@ Fedora and EPEL users can also install from a [Copr repository](https://copr.fed
 
   ```sh
   cd /tmp
-  curl -sL https://github.com/nana-4/Flat-Plat/archive/v20170605.tar.gz | tar xz
-  cd Flat-Plat-20170605 && sudo ./install.sh
+  curl -sL https://github.com/nana-4/Archie/archive/v20170605.tar.gz | tar xz
+  cd Archie-20170605 && sudo ./install.sh
   ```
 
 2. Select the theme using `gnome-tweak-tool` or other suitable tools.
 
 3. Optionally;
   - Set the font size to `9.75` (= 13px at 96dpi) or `10.5` (= 14px at 96dpi).
-  - Open the `chrome` folder on `/usr/share/themes/Flat-Plat`* and drag and drop the `.crx` files onto the Chrome/Chromium _Extensions_ page.
+  - Open the `chrome` folder on `/usr/share/themes/Archie`* and drag and drop the `.crx` files onto the Chrome/Chromium _Extensions_ page.
 
 ### Manual Uninstallation
 - Delete the installed directories.
 
   ```sh
-  sudo rm -rf /usr/share/themes/Flat-Plat{,-compact,-dark,-dark-compact,-light,-light-compact}
+  sudo rm -rf /usr/share/themes/Archie{,-compact,-dark,-dark-compact,-light,-light-compact}
   ```
 
 GDM (Lock/Login Screen)
@@ -107,20 +107,20 @@ Preview
 
 Contributing
 ------------
-If you find bugs or have suggestions, please report it to the [issue tracker](https://github.com/nana-4/Flat-Plat/issues).  
+If you find bugs or have suggestions, please report it to the [issue tracker](https://github.com/nana-4/Archie/issues).  
 Any contribution will be much appreciated.
 
 Planned Features
 ----------------
 - Supports of Xfce theme
-- Supports of Firefox theme ([in progress](https://github.com/nana-4/Flat-Plat/issues/78))
+- Supports of Firefox theme ([in progress](https://github.com/nana-4/Archie/issues/78))
 - Supports of overlay scrollbars for Chrome/Chromium extension
 - GNOME Terminal color pallet (if possible)
 - Material Design like cursor theme
 
 License
 -------
-Flat-Plat is distributed under the terms of the GNU General Public License, version 2 or later. See the [`COPYING`](COPYING) file for details.
+Archie is distributed under the terms of the GNU General Public License, version 2 or later. See the [`COPYING`](COPYING) file for details.
 
 Credits
 -------
