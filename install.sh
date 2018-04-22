@@ -5,20 +5,20 @@ themename=Archie
 repodir=$(cd $(dirname $0) && pwd)
 srcdir=${repodir}/src
 
-gnomever_major=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f 1)
-gnomever_minor=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f 2)
-
-if [ -z $gnomever_minor ]; then
-  gnomever=3.18
-elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$gnomever_minor ]; then
-  gnomever=$gnomever_major.$gnomever_minor
-elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor + 1)) ]; then
-  gnomever=$gnomever_major.$(($gnomever_minor + 1))
-elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor - 1)) ]; then
-  gnomever=$gnomever_major.$(($gnomever_minor - 1))
-else
-  gnomever=3.18
-fi
+# gnomever_major=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f 1)
+# gnomever_minor=$(gnome-shell --version | cut -d ' ' -f 3 | cut -d . -f 2)
+# 
+# if [ -z $gnomever_minor ]; then
+#   gnomever=3.18
+# elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$gnomever_minor ]; then
+#   gnomever=$gnomever_major.$gnomever_minor
+# elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor + 1)) ]; then
+#   gnomever=$gnomever_major.$(($gnomever_minor + 1))
+# elif [ -e ${srcdir}/gnome-shell/$gnomever_major.$(($gnomever_minor - 1)) ]; then
+#   gnomever=$gnomever_major.$(($gnomever_minor - 1))
+# else
+#   gnomever=3.18
+# fi
 
 echo
 
@@ -57,34 +57,34 @@ for color in '' '-dark' '-light' ; do
         ${themedir}/chrome
     fi
 
-    # Install GNOME Shell Theme
-    install -d ${themedir}/gnome-shell
-    cd ${srcdir}/gnome-shell/${gnomever}
-    cp -ur \
-      no-events.svg \
-      no-notifications.svg \
-      process-working.svg \
-      ${themedir}/gnome-shell
-    cp -urL \
-      extensions \
-      pad-osd.css \
-      ${themedir}/gnome-shell
-    if [ "$color" != '-dark' ] ; then
-      cp -urL \
-        assets \
-        ${themedir}/gnome-shell
-    else
-      cp -urL \
-        assets${color} \
-        ${themedir}/gnome-shell/assets
-    fi
-    cp -ur \
-      gnome-shell${color}${size}.css \
-      ${themedir}/gnome-shell/gnome-shell.css
-    glib-compile-resources \
-      --sourcedir=${themedir}/gnome-shell \
-      --target=${themedir}/gnome-shell/gnome-shell-theme.gresource \
-      gnome-shell-theme.gresource.xml
+   # # Install GNOME Shell Theme
+   # install -d ${themedir}/gnome-shell
+   # cd ${srcdir}/gnome-shell/${gnomever}
+   # cp -ur \
+   #   no-events.svg \
+   #   no-notifications.svg \
+   #   process-working.svg \
+   #   ${themedir}/gnome-shell
+   # cp -urL \
+   #   extensions \
+   #   pad-osd.css \
+   #   ${themedir}/gnome-shell
+   # if [ "$color" != '-dark' ] ; then
+   #   cp -urL \
+   #     assets \
+   #     ${themedir}/gnome-shell
+   # else
+   #   cp -urL \
+   #     assets${color} \
+   #     ${themedir}/gnome-shell/assets
+   # fi
+   # cp -ur \
+   #   gnome-shell${color}${size}.css \
+   #   ${themedir}/gnome-shell/gnome-shell.css
+   # glib-compile-resources \
+   #   --sourcedir=${themedir}/gnome-shell \
+   #   --target=${themedir}/gnome-shell/gnome-shell-theme.gresource \
+   #   gnome-shell-theme.gresource.xml
 
     # Install GTK+ 2 Theme
     install -d ${themedir}/gtk-2.0
